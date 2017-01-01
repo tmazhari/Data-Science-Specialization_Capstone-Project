@@ -10,8 +10,7 @@ This repository contains my submissions for Capstone Project of Data Science Spe
 
   
 
-The Smart Keyboard Shiny application can be accessed at:  
-  
+The Smart Keyboard Shiny application can be accessed at:
 [https://tmazhari.shinyapps.io/Smart-Keyboard](https://tmazhari.shinyapps.io/Smart-Keyboard)
 
 
@@ -20,6 +19,5 @@ The Smart Keyboard Shiny application can be accessed at:
 
   
 
-This presentation lives in RPubs and can be accessed at:  
-  
+This presentation lives in RPubs and can be accessed at:
 [http://rpubs.com/tmazhari/238992](http://rpubs.com/tmazhari/238992)
