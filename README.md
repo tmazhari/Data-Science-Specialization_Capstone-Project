@@ -4,7 +4,7 @@
 
 This repository contains my submissions for Capstone Project of Data Science Specialization offered by Johns Hopkins University through coursera.com.
 
- In this project I have created a Shiny application called ìSmart Keyboardî. The Smart Keyboard lets user to enter a text, processes it in real time and presents three options for what the next word might be.
+ In this project I have created a Shiny application called ‚ÄúSmart Keyboard‚Äù. The Smart Keyboard lets user to enter a text, processes it in real time and presents three options for what the next word might be.
 
 * **Shiny Application** The Smart Key application is created with Shiny framework. The source code for this application can be found in this repository. 
 
