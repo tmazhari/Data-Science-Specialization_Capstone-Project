@@ -35,16 +35,20 @@ Above is the general plan that we are going to follow. But there are some facts 
 ### N-Grams
 
 After creating document-feature matrix from corpus, we use **quanteda** package to extract N-Grams from the dfm, Unigrams, Bigrams and Trigrams. Unigrams are the unique single words *w1* that have been observed in the sample dataset, Bigrams are *w1w2* format two word phrases that have been observed in the sample dataset and Trigrams are *w1w2w3* format three word phrases that have been observed in the sample dataset. Below are the number of observations in each N-Gram dataframe:
+
 Unigrams | Bigrams | Trigrams
 --- | --- | ---
 15456 | 69758 | 96678
+
 Now imagine if word "the" in our entire coprus has seen 11 times and following words as shown below:
+
 word| count
 --- | ---
 the | 11
 the dog | 5
 the girl | 4
 the man | 2
+
 We can say that the probability of observing "dog" after word "the" is 5/11. This probability is called Maximum Likelihood Estimate. MLEs are almost always high. MLEs are computed using only observed N-Gram counts. In other words we have calculated the probability of "dog after "the" based on only the words that we have seen after "the" which are "dog", "girl" and "man". So what about the words that have not appeared after "the" in this corpus but in real language can appear after "the"? 
 
 In order to solve this issue, we should calculate reasonable estimate of probabilities for unobserved N-Grams. This is where **Smoothing** comes in. In this scenario,  unobserved N-Grams are bigrams that their first word *w1* is going to be "the" and their second word *w2* is going to be all unigrams in the corpus that have not appeared after "the" in the corpus.       
@@ -77,10 +81,13 @@ Finally we merged seen and unseen Bigrams as well as Trigrams. For merged Bigram
 Now, Unigrams are the unique single words that were observed in the sample dataset with their estimates. Bigrams are w1w2 format two word phrases that their first word w1 are observed unigrams but the second word w2 may or may not has been seen after w1 in the sample dataset. Also Trigrams are w1w2w3 format three word phrases that their first two words w1w2 are observed bigrams in the sample but the third word w3 may or may not has been seen after w1w2 in the sample dataset.
 
 *A sample unigram "on"*
+
 word | count | leftover_prob | estimate | beta
 --- | ---
 on | 869 | 0.2883774 | 0.0085518 | 0.6335239
+
 *Unseen words after "on"*
+
 word | count | leftover_prob | estimate | beta
 --- | ---
  of | 1984 |     0.3217742 | 0.01952448 | 0.5935307
@@ -89,7 +96,9 @@ word | count | leftover_prob | estimate | beta
 are |  531 |    0.3770245 | 0.00522556 | 0.6875999
 be |  527  |    0.4104364 | 0.00518619 | 0.6752791
 have |   518 |     0.2729730|  0.00509762 | 0.6935438
+
 *Unseen bigrams starting with "on" *
+
 name | estimate
 --- | ---
 on_of | 0.01952448
