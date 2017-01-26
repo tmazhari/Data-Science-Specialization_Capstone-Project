@@ -97,7 +97,7 @@ are |  531 |    0.3770245 | 0.00522556 | 0.6875999
 be |  527  |    0.4104364 | 0.00518619 | 0.6752791
 have |   518 |     0.2729730|  0.00509762 | 0.6935438
 
-*Unseen bigrams starting with "on" *
+*Unseen bigrams starting with "on"*
 
 name | estimate
 --- | ---
