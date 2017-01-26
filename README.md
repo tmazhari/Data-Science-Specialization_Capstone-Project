@@ -83,13 +83,13 @@ Now, Unigrams are the unique single words that were observed in the sample datas
 *A sample unigram "on"*
 
 word | count | leftover_prob | estimate | beta
---- | ---
+--- | --- | --- | --- | ---
 on | 869 | 0.2883774 | 0.0085518 | 0.6335239
 
 *Unseen words after "on"*
 
 word | count | leftover_prob | estimate | beta
---- | ---
+--- | --- | --- | --- | ---
  of | 1984 |     0.3217742 | 0.01952448 | 0.5935307
  on |  869 |    0.2883774 | 0.00855180 | 0.6335239
  was |  638  |    0.3873041 | 0.00627854  | 0.6117458
