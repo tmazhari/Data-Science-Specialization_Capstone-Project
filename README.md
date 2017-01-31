@@ -105,6 +105,8 @@ on_of | 0.01952448
 on_on | 0.00855180
 on_was | 0.00627854
 
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png)
+
 ## Referneces
 
 http://files.asimihsan.com/courses/nlp-coursera-2013/notes/nlp.html#discounting-methods-part-1
