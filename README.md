@@ -40,7 +40,7 @@ Unigrams | Bigrams | Trigrams
 --- | --- | ---
 15456 | 69758 | 96678
 
-Now imagine if word "the" in our entire coprus has seen 11 times and following words as shown below:
+Now imagine if word "the" in our entire coprus has been seen 11 times and following words as shown below:
 
 word| count
 --- | ---
@@ -49,14 +49,14 @@ the dog | 5
 the girl | 4
 the man | 2
 
-We can say that the probability of observing "dog" after word "the" is 5/11. This probability is called Maximum Likelihood Estimate. MLEs are almost always high. MLEs are computed using only observed N-Gram counts. In other words we have calculated the probability of "dog after "the" based on only the words that we have seen after "the" which are "dog", "girl" and "man". So what about the words that have not appeared after "the" in this corpus but in real language can appear after "the"? 
+We can say that the probability of observing "dog" after word "the" is 5/11. This probability is called Maximum Likelihood Estimate. MLEs are almost always high. MLEs are computed using only observed N-Gram counts. In other words we have calculated the probability of "dog" after "the" based on only the words that we have seen after "the" which are "dog", "girl" and "man". So what about the words that have not appeared after "the" in this corpus but in real language can appear after "the"? 
 
 In order to solve this issue, we should calculate reasonable estimate of probabilities for unobserved N-Grams. This is where **Smoothing** comes in. In this scenario,  unobserved N-Grams are bigrams that their first word *w1* is going to be "the" and their second word *w2* is going to be all unigrams in the corpus that have not appeared after "the" in the corpus.       
 
 
 ### Smoothing
 
-For Smoothing we have used **Katz's back-off** model. Katz's back-off is a model that estimates the conditional probability of a word given its history in the N-Gram. Meaning we estimate the probabilities of unseen Trigrams and Bigrams using this model. This model is a discounting technique that it takes some amount of probabilites for seen N-Grams and distributes it among unseen N-Grams. We do discounting for Trigrams and Bigrams. 
+For Smoothing we have used **Katz's back-off** model. Katz's back-off is a model that estimates the conditional probability of a word given its history in the N-Gram. Meaning we estimate the probabilities of unseen Trigrams and Bigrams using this model. This model is a discounting technique that takes some amount of probabilites for seen N-Grams and distributes it among unseen N-Grams. We do discounting for Bigrams and Trigrams. 
 
 To be more specific,  we discount at Trigram level to estimate probabilities of unobserved Trigrams by taking that discounted mass and distributing it according to the Bigram frequencies. Likewise, at Bigram level, we discount again and use it to estimate unobserved Bigrams by using the Unigram frequencies. In this project, we have used an absolute discount value of 0.7 at the Bigram and Trigram level.
 
@@ -64,13 +64,24 @@ For generating unseen bigrams and trigrams and their estimates, we used a discou
 
 ### Logic 
 
-Based on Katz's Back-Off model, calculating the estimates for seen N-Grams are relatively easy. For example for seen Bigrams the estimate is:
+Based on Katz's Back-Off model we can calculate estimates for both seen and unseen N-Grams. Below is the model for Bigrams:
+
+![alt text](https://github.com/tmazhari/Data-Science-Specialization_Capstone-Project/blob/master/figure/KatzBigramModel.PNG)
+  
+As shown above, calculating estimates for seen N-Grams are relatively easy.
+
+For example for seen Bigrams the estimate is:
 `dicounted count(*w1w2*) / count(*w1*)`
 
 Calculating estimates for unseen Bigrams requires a little bit more calculations. However based on the Katz's Back-Off model it can be concluded that the estimate for unseen bigram *w1w2* is:
 `alpha(*w1*) * qML(*w2*) / denominator` 
-where denominator is only dependent on *w1* and not *w2*. 
-So for each *w1* we can calculate the value of `alpha(*w1*) / denominator` and store it at that level. Let's call this value *beta*.
+The interesting point is denominator is only dependent on the set of words that have been seen before *w2* in the corpus. Since we already know this set, so denominator can be calculated in advance and kept stored at Unigram level. 
+
+Therefore, for all unigrams we can calculate alpha and this denominator value. Let's calculate the value of `alpha(*w1*) / denominator` for each unigram and call it *beta* and store it in Unigrams.
+
+Similarly how we computed *beta* for Unigrams, we can compute this value for Bigrams and store it at Bigram level. 
+
+![alt text](https://github.com/tmazhari/Data-Science-Specialization_Capstone-Project/blob/master/figure/KatzTrigramModel.PNG)
 
 So based on Bigrams we can calculate Unigram *beta*s and based on Trigrams we can calculate Bigram *beta*s.   
 
@@ -104,8 +115,6 @@ name | estimate
 on_of | 0.01952448
 on_on | 0.00855180
 on_was | 0.00627854
-
-![alt text](https://github.com/tmazhari/Data-Science-Specialization_Capstone-Project/blob/master/figure/KatzBigramModel.PNG)
 
 ## Referneces
 
