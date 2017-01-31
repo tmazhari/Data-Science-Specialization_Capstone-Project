@@ -105,7 +105,7 @@ on_of | 0.01952448
 on_on | 0.00855180
 on_was | 0.00627854
 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png)
+![alt text](https://github.com/tmazhari/Data-Science-Specialization_Capstone-Project/blob/master/figure/KatzBigramModel.PNG)
 
 ## Referneces
 
