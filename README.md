@@ -11,6 +11,8 @@ Simply enter a text in the textfield and you can see that as you type the applic
 
 ## Data
 
+The training data that we use for building our predictive model can be found [here](https://d396qusza40orc.cloudfront.net/dsscapstone/dataset/Coursera-SwiftKey.zip). The data is from a corpus called HC Corpora [www.corpora.heliohost.org](www.corpora.heliohost.org). The data consists of multiple files in four different languages. We use files in English locale in this project. These files are shown below with some statistics about them.
+
 Blogs | News | Twitter
 --- | --- | ---
 205 MB | 201 MB | 163 MB
@@ -118,11 +120,11 @@ on_was | 0.00627854
 
 ## Referneces
 
-http://files.asimihsan.com/courses/nlp-coursera-2013/notes/nlp.html#discounting-methods-part-1
-https://www.youtube.com/watch?v=hsHw9F3UuAQ
-https://www.youtube.com/watch?v=FedWcgXcp8w
-https://www.youtube.com/watch?v=ruU_Y0iCMDA
-https://www.youtube.com/watch?v=1vKNiuiB-6U
-https://www.youtube.com/watch?v=d8nVJjlMOYo&index=16&list=PL6397E4B26D00A269
-https://www.youtube.com/watch?v=XdjCCkFUBKU&list=PL6397E4B26D00A269&index=18
-https://www.youtube.com/watch?v=wtB00EczoCM&index=19&list=PL6397E4B26D00A269
+1. http://files.asimihsan.com/courses/nlp-coursera-2013/notes/nlp.html#discounting-methods-part-1
+1. https://www.youtube.com/watch?v=hsHw9F3UuAQ
+1. https://www.youtube.com/watch?v=FedWcgXcp8w
+1. https://www.youtube.com/watch?v=ruU_Y0iCMDA
+1. https://www.youtube.com/watch?v=1vKNiuiB-6U
+1. https://www.youtube.com/watch?v=d8nVJjlMOYo&index=16&list=PL6397E4B26D00A269
+1. https://www.youtube.com/watch?v=XdjCCkFUBKU&list=PL6397E4B26D00A269&index=18
+1. https://www.youtube.com/watch?v=wtB00EczoCM&index=19&list=PL6397E4B26D00A269
