@@ -21,7 +21,11 @@ Blogs | News | Twitter
 
 ### Sampling Data
 
-To build our model, we created a sample corpus by reading in randomly selected lines of each dataset blogs, news and twitter and combining them. We created the sample corpus by sampling 1/1000 lines of main corpus. From now on we explore this new dataset that is a representative sample of our original datasets.
+To build our model, we created a sample corpus by reading in randomly selected lines of each dataset blogs, news and twitter and combining them. We created the sample corpus by sampling 1/1000 lines of main corpus. From now on we explore this new dataset that is a representative sample of our original datasets. Here are some statistics about the sample corpus:
+
+Lines | Sentences | Tokens
+--- | --- | --- | ---
+4269 | 6468 | 122773
 
 ## Problem
 
