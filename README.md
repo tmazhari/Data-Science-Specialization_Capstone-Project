@@ -7,7 +7,7 @@ https://tmazhari.shinyapps.io/Smart-Keyboard
 
 ## Background
 
-Simply enter a text in the textfield and you can see that as you type the application proccesses your text and suggests three options for the next word.
+Technologies that are capable of inferring meaning and intent from information are very intriguing. One of this type of technologies is a system that can transform a corpus of text into a text prediction system. Tha aim of this project is to build a predictive system, a prdictive text analytics system that develops a predictive model of text out of large sets of unstuctured databases of english language text. Building such system requires consucting analysis, cleaning, tokenization of text. 
 
 ## Data
 
