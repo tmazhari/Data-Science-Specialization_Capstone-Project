@@ -21,6 +21,8 @@ Blogs | News | Twitter
 
 ### Sampling Data
 
+To build our model, we created a sample corpus by reading in randomly selected lines of each dataset blogs, news and twitter and combining them. We created the sample corpus by sampling 1/1000 lines of main corpus. From now on we explore this new dataset that is a representative sample of our original datasets.
+
 ## Problem
 
 Predicting the next word problem is a **Markov Model**. Markov models are a class of probabilistic models that assume we can predict the probability of some future unit without looking too far into the past. In other words, this model assumes that predicting next word only depends on a few number of preceding words and not the whole text. This is why we generate N-Grams to use them to predict the next word. We simply look at the preceding 1, 2, 3 or ... words and predict the next word based on the probability of these preceding words and not the whole text. In the application we only look at the preceding 2 words of the input to guess the next word.
