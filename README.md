@@ -126,11 +126,23 @@ on_was | 0.00627854
 
 ## Referneces
 
-1. http://files.asimihsan.com/courses/nlp-coursera-2013/notes/nlp.html#discounting-methods-part-1
-1. https://www.youtube.com/watch?v=hsHw9F3UuAQ
-1. https://www.youtube.com/watch?v=FedWcgXcp8w
-1. https://www.youtube.com/watch?v=ruU_Y0iCMDA
-1. https://www.youtube.com/watch?v=1vKNiuiB-6U
-1. https://www.youtube.com/watch?v=d8nVJjlMOYo&index=16&list=PL6397E4B26D00A269
-1. https://www.youtube.com/watch?v=XdjCCkFUBKU&list=PL6397E4B26D00A269&index=18
-1. https://www.youtube.com/watch?v=wtB00EczoCM&index=19&list=PL6397E4B26D00A269
+1. Data Science Specialization - Data Science Capstone - Discussion Forums
+2. http://files.asimihsan.com/courses/nlp-coursera-2013/notes/nlp.html#discounting-methods-part-1
+3. https://www.youtube.com/watch?v=hsHw9F3UuAQ
+4. https://www.youtube.com/watch?v=FedWcgXcp8w
+5. https://www.youtube.com/watch?v=ruU_Y0iCMDA
+6. https://www.youtube.com/watch?v=1vKNiuiB-6U
+7. https://www.youtube.com/watch?v=d8nVJjlMOYo&index=16&list=PL6397E4B26D00A269
+8. https://www.youtube.com/watch?v=XdjCCkFUBKU&list=PL6397E4B26D00A269&index=18
+9. https://lagunita.stanford.edu/c4x/Engineering/CS-224N/asset/slp4.pdf
+10. www.cs.columbia.edu/~kathy/NLP/ClassSlides/Class3-ngrams09/ngrams.pdf
+11. http://www.speech.sri.com/projects/srilm/manpages/ngram-discount.7.html
+12. https://en.m.wikipedia.org/wiki/Katz%27s_back-off_model
+13. https://en.wikipedia.org/wiki/Markov_chain
+14. https://en.wikipedia.org/wiki/Markov_model
+15. https://en.m.wikipedia.org/wiki/N-gram
+
+### Other Useful Resources
+16. https://rstudio-pubs-static.s3.amazonaws.com/31867_8236987cf0a8444e962ccd2aec46d9c3.html
+17. https://www.r-bloggers.com/text-mining-the-complete-works-of-william-shakespeare/
+18. https://www.youtube.com/watch?v=wtB00EczoCM&index=19&list=PL6397E4B26D00A269
