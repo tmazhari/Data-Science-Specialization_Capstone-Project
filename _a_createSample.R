@@ -13,11 +13,6 @@ twitter <- read_lines("./data/final/en_US/en_US.twitter.txt", skip = 0, n_max = 
 twitterLength <- length(twitter)
 twitterLength
 
-# Print number of words
-# TODO
-# news <- system('wc -lwm ./data/final/en_US/en_US.news.txt',intern = TRUE)
-# news_n <- as.numeric(grep('[0-9]', unlist(strsplit(news," ")), value = TRUE))
-
 # Create sample dataset
 library(LaF)
 set.seed(123)
