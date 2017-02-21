@@ -71,37 +71,3 @@ bidf$beta <- apply(bidf, 1, function(y) calcBigramBeta((y)))
 
 # Write the final df to file
 write.csv(bidf, file = "beta_2gram.csv", row.names = FALSE, na = "")
-
-# word <- bidf[11111,1]
-# 
-# w2 <- strsplit(word, "_")[[1]][2]
-# delta_w2 <- unidf[which(unidf$word == w2), 6]
-# 
-# searchkey <- paste("^", word, "_", sep="")
-# a <- tridf[grep(searchkey, tridf$word), 1]
-# seenuni <- gsub(".*_*_","",a)
-# mask <- (uni %in% seenuni)
-# # b is all unseen unigrams after bigram input. Ex. unseen unigrams after "to_be"
-# b <- uni[!mask]
-# 
-# # should divide b into to groups. First group is seen unigrams after middle word. Ex. seen unigrams after "be"
-# searchkey2 <- paste("^", w2, "_", sep="")
-# c <- bidf[grep(searchkey2, bidf$word), 1]
-# d <- gsub(".*_","",c)
-# mask <- (b %in% d)
-# # b1 <- b[mask]
-# mask2 <- (d %in% b)
-# e <- c[mask2]
-# df <- bidf[bidf$word %in% e,]
-# sumestimate_b1 <- sum(df$estimate)
-# 
-# # second group is unseen unigrams after middle word. Ex. unseen unigrams after "be"
-# b2 <- b[!mask]
-# if (length(b2) > 0) {
-#   df <- unidf[unidf$word %in% b2,];
-#   sumestimate_b2 <- sum(df$estimate);
-# } else {
-#   sumestimate_b2 <- 0;
-# }
-# 
-# beta <- delta_w2 * sumestimate_b2 + sumestimate_b1
