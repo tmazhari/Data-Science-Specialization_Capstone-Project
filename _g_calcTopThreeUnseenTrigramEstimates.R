@@ -66,10 +66,3 @@ unseenTridf$estimate <- round(unseenTridf$estimate, 8)
 
 # Write the final df to file
 write.csv(unseenTridf, file = "unseen_3gram.csv", row.names = FALSE, na = "")
-
-# for input w1w2 bigram# 
-# find trigrams w1w2w3 that start with w1w2
-# from above trigrams extract w2w3s
-# find bigrams equal to w2
-# from above bigrams that are not w2w3s and store as unseen bigrams
-# find top three unseen bigrams with highest estimates
